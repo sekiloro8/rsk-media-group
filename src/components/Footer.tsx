@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
-import { Facebook, Instagram, Twitter, Linkedin, Mail, Phone } from "lucide-react";
+import { Facebook, Instagram, Twitter, Linkedin, Mail, Phone, MapPin } from "lucide-react";
+import logo from "@/assets/logo.png";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -10,9 +11,9 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           {/* Company Info */}
           <div>
-            <h3 className="text-xl font-bold mb-4">R-SK Media Group</h3>
+            <img src={logo} alt="R-SK Media Group" className="h-16 w-auto mb-4 brightness-0 invert" />
             <p className="text-primary-foreground/80 text-sm">
-              Innovative Media Solutions for Africa. Your Partner You Can Trust.
+              Innovative Media Solutions for Africa. Your Partner You Can Trust in Media, Marketing & Digital Growth.
             </p>
           </div>
 
@@ -47,10 +48,12 @@ const Footer = () => {
           <div>
             <h4 className="font-semibold mb-4">Our Services</h4>
             <ul className="space-y-2 text-sm text-primary-foreground/80">
-              <li>Outdoor Advertising</li>
+              <li>Brand Development</li>
+              <li>Product Development</li>
+              <li>Outdoor Marketing</li>
               <li>Digital Marketing</li>
-              <li>Creative Production</li>
-              <li>Media Strategy</li>
+              <li>Printing & Publishing</li>
+              <li>Production</li>
             </ul>
           </div>
 
@@ -58,18 +61,22 @@ const Footer = () => {
           <div>
             <h4 className="font-semibold mb-4">Contact Us</h4>
             <div className="space-y-3 text-sm">
-              <div className="flex items-center gap-2">
-                <Phone size={16} />
+              <div className="flex items-start gap-2">
+                <Phone size={16} className="mt-1" />
                 <div>
                   <div>+266 5686 2921</div>
                   <div>+266 5373 1891</div>
                 </div>
               </div>
-              <div className="flex items-center gap-2">
-                <Mail size={16} />
+              <div className="flex items-start gap-2">
+                <Mail size={16} className="mt-1" />
                 <a href="mailto:rskmediagroup@gmail.com" className="hover:text-primary-foreground transition-colors">
                   rskmediagroup@gmail.com
                 </a>
+              </div>
+              <div className="flex items-start gap-2">
+                <MapPin size={16} className="mt-1" />
+                <div>Mafeteng, Lesotho</div>
               </div>
             </div>
           </div>

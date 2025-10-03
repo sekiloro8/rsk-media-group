@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, Target, Megaphone, Palette, TrendingUp } from "lucide-react";
+import { ArrowRight, Package, Award, MessageSquare, Printer, TrendingUp, Radio } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
@@ -10,24 +10,34 @@ import heroImage from "@/assets/hero-bg.jpg";
 const Index = () => {
   const services = [
     {
-      icon: Megaphone,
-      title: "Outdoor Advertising",
-      description: "Strategic billboard placements and outdoor media campaigns that capture attention and drive results across Africa.",
+      icon: Award,
+      title: "Brand Development",
+      description: "Build a powerful brand identity with our logo design, corporate identity, banners, flyers, and business cards.",
+    },
+    {
+      icon: Package,
+      title: "Product Development",
+      description: "From packaging design to product labels and barcodes - complete product development and consultation services.",
     },
     {
       icon: TrendingUp,
       title: "Digital Marketing",
-      description: "Data-driven social media strategies, SEO, and digital campaigns that amplify your brand's online presence.",
+      description: "Social media management, web design, custom emails, business proposals, and comprehensive digital strategies.",
     },
     {
-      icon: Palette,
-      title: "Creative Production",
-      description: "Stunning graphics, compelling videos, and eye-catching ad creatives that tell your brand's story.",
+      icon: Printer,
+      title: "Printing & Publishing",
+      description: "High-quality printing services including product labels, vinyl stickers, contravision, uniforms, and more.",
     },
     {
-      icon: Target,
-      title: "Media Strategy",
-      description: "Expert consultation and strategic planning to maximize your media investment and reach your target audience.",
+      icon: Radio,
+      title: "Outdoor Marketing",
+      description: "Strategic outdoor advertising with sign boards, digital screens, vinyl stickers, and billboard design.",
+    },
+    {
+      icon: MessageSquare,
+      title: "Brand Consultation",
+      description: "Expert guidance on brand strategy, positioning, and growth to help your business thrive in the market.",
     },
   ];
 
@@ -82,7 +92,7 @@ const Index = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {services.map((service, index) => (
               <div key={index} style={{ animationDelay: `${index * 0.1}s` }}>
                 <ServiceCard {...service} />
@@ -100,7 +110,7 @@ const Index = () => {
               We Are R-SK Media Group
             </h2>
             <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-              Founded with the vision to redefine media in Africa, we combine creativity, strategy, and innovation to deliver exceptional results for our clients. With years of experience and a passion for excellence, we've become the trusted partner for brands looking to make a lasting impact.
+              We are professionals with over 12 years of experience in business across Finance, Textiles, Manufacturing, and Farming. Founded with the vision to redefine media in Africa, we combine creativity, strategy, and innovation to deliver exceptional results. Our commitment to truth, honesty, and integrity sets us apart as your trusted partner in media excellence.
             </p>
             <Button asChild variant="outline" size="lg" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground">
               <Link to="/about">

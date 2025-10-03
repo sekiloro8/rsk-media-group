@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { Button } from "./ui/button";
+import logo from "@/assets/logo.png";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -35,9 +36,7 @@ const Navbar = () => {
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           <Link to="/" className="flex items-center space-x-2">
-            <div className="text-2xl font-bold bg-gradient-hero bg-clip-text text-transparent">
-              R-SK Media Group
-            </div>
+            <img src={logo} alt="R-SK Media Group" className="h-12 w-auto" />
           </Link>
 
           {/* Desktop Navigation */}

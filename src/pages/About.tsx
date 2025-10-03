@@ -7,19 +7,19 @@ import { Card } from "@/components/ui/card";
 const About = () => {
   const values = [
     {
-      icon: Target,
-      title: "Our Mission",
-      description: "To deliver innovative, impactful media solutions that empower African brands to reach their full potential and connect meaningfully with their audiences.",
-    },
-    {
       icon: Eye,
       title: "Our Vision",
-      description: "To be Africa's most trusted media partner, recognized for creativity, reliability, and transformative campaigns that shape the future of advertising.",
+      description: "To lead people towards the light, anything that can bring light into this dark world is the Truth. We shall not compromise on telling what is true without any fear of favour.",
+    },
+    {
+      icon: Target,
+      title: "Our Mission",
+      description: "To be the main usher of the word (Truth) into the world.",
     },
     {
       icon: Award,
       title: "Our Values",
-      description: "Excellence, Innovation, Integrity, and Partnership. We believe in building lasting relationships and delivering results that exceed expectations.",
+      description: "Creativity, Honesty, Openness, Integrity, Courage, Hardwork, and Respect.",
     },
   ];
 
@@ -49,13 +49,13 @@ const About = () => {
             <h2 className="text-4xl font-bold mb-6 text-foreground">Our Story</h2>
             <div className="space-y-4 text-lg text-muted-foreground leading-relaxed">
               <p>
-                Founded with the vision to redefine media in Africa, R-SK Media Group has grown from a passionate startup into a leading media solutions provider. We recognized early on that African brands needed a partner who understood both the local market dynamics and global best practices.
+                We are professionals with over 12 years of experience in the business world, spanning various industries from Finance, Textiles, Manufacturing, and Farming. Founded on July 1, 2021, R-SK Media Group (PTY LTD) was established with a clear purpose: to be different in a world full of falsehood.
               </p>
               <p>
-                Over the years, we've built a reputation for delivering exceptional results through innovative outdoor advertising campaigns, cutting-edge digital marketing strategies, and compelling creative productions. Our team combines deep industry knowledge with creative excellence to help brands tell their stories and achieve their goals.
+                Based in Mafeteng, Lesotho, we've built our reputation on providing comprehensive media solutions including Product and Brand Development, E-Marketing, Brand Consultation, Printing & Publishing, Outdoor Media, and TV & Radio Production. Our commitment to truth, creativity, and excellence drives everything we do.
               </p>
               <p>
-                What sets us apart is our commitment to understanding each client's unique needs and crafting customized solutions that deliver measurable results. We don't just execute campaigns – we build partnerships that drive long-term success.
+                What sets us apart is our unwavering commitment to honesty and integrity. We believe in leading people towards the light, telling what is true without any fear or favour. Our diverse experience across multiple industries gives us unique insights that we bring to every project.
               </p>
             </div>
           </div>
@@ -101,12 +101,12 @@ const About = () => {
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {[
-                { title: "Local Expertise", description: "Deep understanding of African markets and consumer behavior" },
-                { title: "Proven Track Record", description: "Successful campaigns across multiple industries and regions" },
-                { title: "Creative Excellence", description: "Award-winning creative team delivering stunning visuals and compelling narratives" },
-                { title: "Data-Driven Approach", description: "Strategic decisions backed by insights and analytics" },
-                { title: "End-to-End Solutions", description: "From strategy to execution, we handle everything" },
-                { title: "Dedicated Support", description: "Committed account management and ongoing optimization" },
+                { title: "Buy into Media Corporations", description: "Strategic goal to expand our reach and influence across Africa" },
+                { title: "Internationally Recognized", description: "Building a globally respected brand known for excellence" },
+                { title: "Leaders in Innovation", description: "Pioneering creative and innovative solutions in media" },
+                { title: "Modern Media Platforms", description: "Adopting cutting-edge trends to ensure effective communication" },
+                { title: "12+ Years Experience", description: "Deep expertise across Finance, Textiles, Manufacturing, and Farming" },
+                { title: "Truth & Integrity", description: "Committed to honesty without fear or favour in all we do" },
               ].map((item, index) => (
                 <div
                   key={index}

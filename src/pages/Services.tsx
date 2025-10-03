@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Megaphone, TrendingUp, Palette, Target, ArrowRight } from "lucide-react";
+import { Package, Award, MessageSquare, Printer, TrendingUp, Radio, ArrowRight } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
@@ -9,51 +9,74 @@ import { Card } from "@/components/ui/card";
 const Services = () => {
   const services = [
     {
-      icon: Megaphone,
-      title: "Outdoor Media & Billboards",
-      description: "Transform your brand visibility with our strategic outdoor advertising solutions. We offer premium billboard placements in high-traffic locations, creative design services, and campaign management that ensures maximum impact.",
+      icon: Award,
+      title: "Brand Development",
+      description: "Build a powerful brand identity that resonates with your audience and stands out in the marketplace.",
       features: [
-        "Strategic location analysis and selection",
-        "Premium billboard placements",
-        "Creative design and production",
-        "Installation and maintenance",
-        "Performance tracking and reporting",
+        "Business Cards",
+        "Banners & Flyers",
+        "Logo Design",
+        "Corporate Identity",
+      ],
+    },
+    {
+      icon: Package,
+      title: "Product Development",
+      description: "Comprehensive product design and development services to bring your ideas to market successfully.",
+      features: [
+        "Packaging Design",
+        "Product Label Design",
+        "Barcodes",
+        "Testing & Consultation",
+      ],
+    },
+    {
+      icon: MessageSquare,
+      title: "Brand Consultation",
+      description: "Expert guidance on brand strategy, positioning, and growth to help your business thrive.",
+      features: [
+        "Brand Strategy",
+        "Market Positioning",
+        "Brand Guidelines",
+        "Growth Consulting",
+      ],
+    },
+    {
+      icon: Printer,
+      title: "Printing & Publishing",
+      description: "High-quality printing services for all your business and marketing needs.",
+      features: [
+        "Product Labels",
+        "Vinyl Stickers",
+        "Contravision",
+        "Sandblast/Frosting",
+        "Uniforms",
+        "TV & Radio Materials",
       ],
     },
     {
       icon: TrendingUp,
-      title: "Digital Marketing & Social Media",
-      description: "Amplify your online presence with our comprehensive digital marketing services. From social media management to SEO and paid advertising, we help you connect with your audience where they spend their time.",
+      title: "Digital Marketing",
+      description: "Comprehensive digital solutions to expand your online presence and reach your target audience.",
       features: [
-        "Social media strategy and management",
-        "Content creation and scheduling",
-        "SEO optimization",
-        "Paid advertising campaigns (Google, Facebook, Instagram)",
-        "Analytics and performance reporting",
+        "Social Media Management",
+        "Web Design",
+        "Custom Emails",
+        "Company Registration",
+        "Business Proposals",
+        "Business Plans",
+        "Company Profiles",
       ],
     },
     {
-      icon: Palette,
-      title: "Creative Production",
-      description: "Bring your brand to life with stunning visuals and compelling content. Our creative team delivers high-quality graphics, videos, and multimedia content that captures attention and drives engagement.",
+      icon: Radio,
+      title: "Outdoor Marketing",
+      description: "Strategic outdoor advertising solutions to maximize your brand visibility.",
       features: [
-        "Graphic design and branding",
-        "Video production and editing",
-        "Photography services",
-        "Ad creative development",
-        "Motion graphics and animation",
-      ],
-    },
-    {
-      icon: Target,
-      title: "Media Strategy & Consulting",
-      description: "Make informed decisions with our expert media strategy consulting. We analyze your market, identify opportunities, and develop comprehensive media plans that maximize your ROI and achieve your business objectives.",
-      features: [
-        "Market research and analysis",
-        "Media planning and buying",
-        "Campaign strategy development",
-        "Budget optimization",
-        "Competitive analysis",
+        "Sign Boards",
+        "Digital Screens",
+        "Vinyl Stickers",
+        "Billboard Design",
       ],
     },
   ];
@@ -68,7 +91,7 @@ const Services = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-5xl md:text-6xl font-black mb-6 animate-fade-in-up">
-              Our Services
+              What We Do
             </h1>
             <p className="text-xl md:text-2xl text-white/90 animate-fade-in">
               Comprehensive media solutions designed to elevate your brand
@@ -77,42 +100,61 @@ const Services = () => {
         </div>
       </section>
 
-      {/* Services Detail */}
+      {/* Services Grid */}
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
-          <div className="space-y-16 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
             {services.map((service, index) => (
               <Card
                 key={index}
-                className="p-8 md:p-12 hover:shadow-xl transition-all duration-300 border-border/50 hover:border-primary/30 bg-gradient-card animate-fade-in"
+                className="p-8 hover:shadow-xl transition-all duration-300 border-border/50 hover:border-primary/30 bg-gradient-card animate-fade-in"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <div className="flex flex-col md:flex-row gap-8">
-                  <div className="flex-shrink-0">
-                    <div className="inline-flex items-center justify-center w-20 h-20 rounded-xl bg-gradient-accent text-accent-foreground">
-                      <service.icon size={40} />
-                    </div>
-                  </div>
-                  <div className="flex-1">
-                    <h2 className="text-3xl font-bold mb-4 text-foreground">{service.title}</h2>
-                    <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-                      {service.description}
-                    </p>
-                    <div className="space-y-3">
-                      <h3 className="text-xl font-semibold text-foreground">What we offer:</h3>
-                      <ul className="space-y-2">
-                        {service.features.map((feature, idx) => (
-                          <li key={idx} className="flex items-start gap-2 text-muted-foreground">
-                            <span className="text-primary mt-1">•</span>
-                            <span>{feature}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  </div>
+                <div className="inline-flex items-center justify-center w-16 h-16 rounded-xl bg-gradient-accent text-accent-foreground mb-6">
+                  <service.icon size={32} />
+                </div>
+                <h2 className="text-2xl font-bold mb-4 text-foreground">{service.title}</h2>
+                <p className="text-muted-foreground mb-6 leading-relaxed">
+                  {service.description}
+                </p>
+                <div className="space-y-2">
+                  <h3 className="text-sm font-semibold text-foreground uppercase tracking-wider">Services Include:</h3>
+                  <ul className="space-y-2">
+                    {service.features.map((feature, idx) => (
+                      <li key={idx} className="flex items-start gap-2 text-sm text-muted-foreground">
+                        <span className="text-primary mt-0.5">•</span>
+                        <span>{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               </Card>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Production Section */}
+      <section className="py-20 bg-gradient-card">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <div className="inline-flex items-center justify-center w-20 h-20 rounded-xl bg-gradient-accent text-accent-foreground mb-6">
+              <Radio size={40} />
+            </div>
+            <h2 className="text-4xl font-bold mb-6 text-foreground">Media Production</h2>
+            <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
+              Professional radio and TV advert production services to amplify your message across traditional media channels.
+            </p>
+            <div className="flex flex-wrap gap-6 justify-center">
+              <div className="flex items-center gap-2 text-foreground">
+                <span className="text-primary">✓</span>
+                <span className="font-medium">Radio Adverts</span>
+              </div>
+              <div className="flex items-center gap-2 text-foreground">
+                <span className="text-primary">✓</span>
+                <span className="font-medium">TV Adverts</span>
+              </div>
+            </div>
           </div>
         </div>
       </section>
