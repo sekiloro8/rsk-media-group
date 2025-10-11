@@ -47,35 +47,64 @@ const Index = () => {
       <WhatsAppButton />
 
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-hero">
         <div
-          className="absolute inset-0 z-0"
+          className="absolute inset-0 z-0 opacity-20"
           style={{
             backgroundImage: `url(${heroImage})`,
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}
-        >
-          <div className="absolute inset-0 bg-gradient-to-br from-primary/90 via-primary/80 to-accent/70" />
+        />
+
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div className="text-left">
+              <h1 className="text-5xl md:text-7xl font-black text-white mb-6 animate-fade-in-up uppercase leading-tight">
+                Best Digital
+                <span className="block">Marketing</span>
+                <span className="block">Agency</span>
+              </h1>
+              <div className="flex flex-wrap gap-4 mb-8">
+                <span className="text-white/80 uppercase text-sm tracking-wider">• The Future Advertising</span>
+                <span className="text-white/80 uppercase text-sm tracking-wider">• Strategic Minds</span>
+                <span className="text-white/80 uppercase text-sm tracking-wider">• Strategy Genues</span>
+              </div>
+              <div className="flex flex-wrap gap-4 animate-scale-in">
+                <Button asChild size="lg" className="text-lg px-8 py-6 uppercase font-bold">
+                  <Link to="/contact">
+                    Learn More
+                  </Link>
+                </Button>
+                <Button asChild size="lg" variant="outline" className="text-lg px-8 py-6 uppercase font-bold border-white text-white">
+                  <Link to="/services">
+                    See How It Works
+                  </Link>
+                </Button>
+              </div>
+            </div>
+            <div className="relative animate-fade-in hidden md:block">
+              <div className="absolute -inset-4 bg-primary/20 rounded-full blur-3xl" />
+              <img 
+                src={heroImage} 
+                alt="Digital Marketing Team" 
+                className="relative rounded-full w-full max-w-lg ml-auto border-4 border-white/20 shadow-2xl"
+              />
+            </div>
+          </div>
         </div>
 
-        <div className="container mx-auto px-4 relative z-10 text-center">
-          <h1 className="text-5xl md:text-7xl font-black text-white mb-6 animate-fade-in-up">
-            Innovative Media Solutions
-            <span className="block text-accent mt-2">for Africa</span>
-          </h1>
-          <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-2xl mx-auto animate-fade-in">
-            Your Partner You Can Trust in Media, Marketing & Digital Growth
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center animate-scale-in">
-            <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-white text-lg px-8 py-6 hover:shadow-glow transition-all duration-300">
-              <Link to="/contact">
-                Get Started <ArrowRight className="ml-2" size={20} />
-              </Link>
-            </Button>
-            <Button asChild size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-primary text-lg px-8 py-6 transition-all duration-300">
-              <Link to="/services">Our Services</Link>
-            </Button>
+        {/* Service Categories Banner */}
+        <div className="absolute bottom-0 left-0 right-0 bg-primary z-20">
+          <div className="container mx-auto px-4">
+            <div className="flex overflow-x-auto py-4 gap-8 scrollbar-hide">
+              <span className="text-white whitespace-nowrap text-sm font-medium">Customer IT Solution</span>
+              <span className="text-white whitespace-nowrap text-sm font-medium">Business Solutions</span>
+              <span className="text-white whitespace-nowrap text-sm font-medium">Web Development Services</span>
+              <span className="text-white whitespace-nowrap text-sm font-medium">UX-UI Design Services</span>
+              <span className="text-white whitespace-nowrap text-sm font-medium">Business Consulting Services</span>
+              <span className="text-white whitespace-nowrap text-sm font-medium">Marketing Company Services</span>
+            </div>
           </div>
         </div>
       </section>
