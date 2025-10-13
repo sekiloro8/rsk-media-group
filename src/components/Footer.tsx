@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Facebook, Instagram, Twitter, Linkedin, Mail, Phone, MapPin } from "lucide-react";
-import logo from "@/assets/logo.png";
+import logoWhite from "@/assets/logo-white.png";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -11,7 +11,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           {/* Company Info */}
           <div>
-            <img src={logo} alt="R-SK Media Group" className="h-16 w-auto mb-4 brightness-0 invert" />
+            <img src={logoWhite} alt="R-SK Media Group" className="h-16 w-auto mb-4" />
             <p className="text-primary-foreground/80 text-sm">
               Innovative Media Solutions for Africa. Your Partner You Can Trust in Media, Marketing & Digital Growth.
             </p>
