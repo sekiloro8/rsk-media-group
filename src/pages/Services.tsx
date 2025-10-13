@@ -5,6 +5,10 @@ import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
+import designWorkspace from "@/assets/design-workspace.jpg";
+import printingFacility from "@/assets/printing-facility.jpg";
+import digitalMarketing from "@/assets/digital-marketing.jpg";
+import outdoorAdvertising from "@/assets/outdoor-advertising.jpg";
 
 const Services = () => {
   const services = [
@@ -100,36 +104,131 @@ const Services = () => {
         </div>
       </section>
 
-      {/* Services Grid */}
+      {/* Services Showcase with Images */}
       <section className="py-20 bg-background">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-            {services.map((service, index) => (
-              <Card
-                key={index}
-                className="p-8 hover:shadow-xl transition-all duration-300 border-border/50 hover:border-primary/30 bg-gradient-card animate-fade-in"
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
+        <div className="container mx-auto px-4 max-w-7xl">
+          {/* Brand & Product Development */}
+          <div className="grid md:grid-cols-2 gap-12 items-center mb-20">
+            <div className="animate-fade-in">
+              <img 
+                src={designWorkspace} 
+                alt="Creative design workspace for brand and product development" 
+                className="rounded-lg shadow-2xl w-full"
+              />
+            </div>
+            <div>
+              <div className="grid gap-6">
+                {services.slice(0, 3).map((service, index) => (
+                  <Card
+                    key={index}
+                    className="p-6 hover:shadow-xl transition-all duration-300 border-border/50 hover:border-primary/30 bg-gradient-card"
+                  >
+                    <div className="flex items-start gap-4">
+                      <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-gradient-accent text-accent-foreground flex items-center justify-center">
+                        <service.icon size={24} />
+                      </div>
+                      <div className="flex-1">
+                        <h2 className="text-xl font-bold mb-2 text-foreground">{service.title}</h2>
+                        <p className="text-muted-foreground text-sm mb-3">{service.description}</p>
+                        <div className="flex flex-wrap gap-2">
+                          {service.features.map((feature, idx) => (
+                            <span key={idx} className="text-xs px-2 py-1 rounded bg-primary/10 text-primary">
+                              {feature}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                  </Card>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          {/* Printing & Digital Services */}
+          <div className="grid md:grid-cols-2 gap-12 items-center mb-20">
+            <div className="order-2 md:order-1">
+              <div className="grid gap-6">
+                <Card className="p-6 hover:shadow-xl transition-all duration-300 border-border/50 hover:border-primary/30 bg-gradient-card">
+                  <div className="flex items-start gap-4">
+                    <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-gradient-accent text-accent-foreground flex items-center justify-center">
+                      <Printer size={24} />
+                    </div>
+                    <div className="flex-1">
+                      <h2 className="text-xl font-bold mb-2 text-foreground">{services[3].title}</h2>
+                      <p className="text-muted-foreground text-sm mb-3">{services[3].description}</p>
+                      <div className="flex flex-wrap gap-2">
+                        {services[3].features.map((feature, idx) => (
+                          <span key={idx} className="text-xs px-2 py-1 rounded bg-primary/10 text-primary">
+                            {feature}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                </Card>
+                <Card className="p-6 hover:shadow-xl transition-all duration-300 border-border/50 hover:border-primary/30 bg-gradient-card">
+                  <div className="flex items-start gap-4">
+                    <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-gradient-accent text-accent-foreground flex items-center justify-center">
+                      <TrendingUp size={24} />
+                    </div>
+                    <div className="flex-1">
+                      <h2 className="text-xl font-bold mb-2 text-foreground">{services[4].title}</h2>
+                      <p className="text-muted-foreground text-sm mb-3">{services[4].description}</p>
+                      <div className="flex flex-wrap gap-2">
+                        {services[4].features.map((feature, idx) => (
+                          <span key={idx} className="text-xs px-2 py-1 rounded bg-primary/10 text-primary">
+                            {feature}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                </Card>
+              </div>
+            </div>
+            <div className="order-1 md:order-2 grid grid-cols-2 gap-4 animate-fade-in">
+              <img 
+                src={printingFacility} 
+                alt="Professional printing facility and equipment" 
+                className="rounded-lg shadow-xl w-full"
+              />
+              <img 
+                src={digitalMarketing} 
+                alt="Digital marketing analytics and strategy" 
+                className="rounded-lg shadow-xl w-full mt-8"
+              />
+            </div>
+          </div>
+
+          {/* Outdoor Marketing */}
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div className="animate-fade-in">
+              <img 
+                src={outdoorAdvertising} 
+                alt="Outdoor advertising billboards and signage" 
+                className="rounded-lg shadow-2xl w-full"
+              />
+            </div>
+            <div>
+              <Card className="p-8 hover:shadow-xl transition-all duration-300 border-border/50 hover:border-primary/30 bg-gradient-card">
                 <div className="inline-flex items-center justify-center w-16 h-16 rounded-xl bg-gradient-accent text-accent-foreground mb-6">
-                  <service.icon size={32} />
+                  <Radio size={32} />
                 </div>
-                <h2 className="text-2xl font-bold mb-4 text-foreground">{service.title}</h2>
-                <p className="text-muted-foreground mb-6 leading-relaxed">
-                  {service.description}
+                <h2 className="text-3xl font-bold mb-4 text-foreground">{services[5].title}</h2>
+                <p className="text-muted-foreground mb-6 leading-relaxed text-lg">
+                  {services[5].description}
                 </p>
-                <div className="space-y-2">
-                  <h3 className="text-sm font-semibold text-foreground uppercase tracking-wider">Services Include:</h3>
-                  <ul className="space-y-2">
-                    {service.features.map((feature, idx) => (
-                      <li key={idx} className="flex items-start gap-2 text-sm text-muted-foreground">
-                        <span className="text-primary mt-0.5">•</span>
-                        <span>{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
+                <div className="space-y-3">
+                  {services[5].features.map((feature, idx) => (
+                    <div key={idx} className="flex items-center gap-3">
+                      <span className="text-primary text-xl">✓</span>
+                      <span className="text-foreground font-medium">{feature}</span>
+                    </div>
+                  ))}
                 </div>
               </Card>
-            ))}
+            </div>
           </div>
         </div>
       </section>

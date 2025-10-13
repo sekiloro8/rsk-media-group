@@ -3,6 +3,8 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import { Card } from "@/components/ui/card";
+import teamCollaboration from "@/assets/team-collaboration.jpg";
+import brandConsultation from "@/assets/brand-consultation.jpg";
 
 const About = () => {
   const values = [
@@ -45,18 +47,27 @@ const About = () => {
       {/* Company Story */}
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-4xl font-bold mb-6 text-foreground">Our Story</h2>
-            <div className="space-y-4 text-lg text-muted-foreground leading-relaxed">
-              <p>
-                We are professionals with over 12 years of experience in the business world, spanning various industries from Finance, Textiles, Manufacturing, and Farming. Founded on July 1, 2021, R-SK Media Group (PTY LTD) was established with a clear purpose: to be different in a world full of falsehood.
-              </p>
-              <p>
-                Based in Mafeteng, Lesotho, we've built our reputation on providing comprehensive media solutions including Product and Brand Development, E-Marketing, Brand Consultation, Printing & Publishing, Outdoor Media, and TV & Radio Production. Our commitment to truth, creativity, and excellence drives everything we do.
-              </p>
-              <p>
-                What sets us apart is our unwavering commitment to honesty and integrity. We believe in leading people towards the light, telling what is true without any fear or favour. Our diverse experience across multiple industries gives us unique insights that we bring to every project.
-              </p>
+          <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto items-center">
+            <div className="order-2 md:order-1">
+              <h2 className="text-4xl font-bold mb-6 text-foreground">Our Story</h2>
+              <div className="space-y-4 text-lg text-muted-foreground leading-relaxed">
+                <p>
+                  We are professionals with over 12 years of experience in the business world, spanning various industries from Finance, Textiles, Manufacturing, and Farming. Founded on July 1, 2021, R-SK Media Group (PTY LTD) was established with a clear purpose: to be different in a world full of falsehood.
+                </p>
+                <p>
+                  Based in Mafeteng, Lesotho, we've built our reputation on providing comprehensive media solutions including Product and Brand Development, E-Marketing, Brand Consultation, Printing & Publishing, Outdoor Media, and TV & Radio Production. Our commitment to truth, creativity, and excellence drives everything we do.
+                </p>
+                <p>
+                  What sets us apart is our unwavering commitment to honesty and integrity. We believe in leading people towards the light, telling what is true without any fear or favour. Our diverse experience across multiple industries gives us unique insights that we bring to every project.
+                </p>
+              </div>
+            </div>
+            <div className="order-1 md:order-2 animate-fade-in">
+              <img 
+                src={teamCollaboration} 
+                alt="R-SK Media Group team collaborating on creative projects" 
+                className="rounded-lg shadow-2xl w-full"
+              />
             </div>
           </div>
         </div>
@@ -95,11 +106,25 @@ const About = () => {
       {/* Why Choose Us */}
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-4xl font-bold mb-8 text-center text-foreground">
-              Why Choose R-SK Media Group?
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="max-w-6xl mx-auto">
+            <div className="grid md:grid-cols-2 gap-12 items-center mb-12">
+              <div className="animate-fade-in">
+                <img 
+                  src={brandConsultation} 
+                  alt="Professional brand consultation and strategy meeting" 
+                  className="rounded-lg shadow-2xl w-full"
+                />
+              </div>
+              <div>
+                <h2 className="text-4xl font-bold mb-6 text-foreground">
+                  Why Choose R-SK Media Group?
+                </h2>
+                <p className="text-lg text-muted-foreground mb-6">
+                  Our unique combination of experience, integrity, and innovation makes us the perfect partner for your media needs.
+                </p>
+              </div>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {[
                 { title: "Buy into Media Corporations", description: "Strategic goal to expand our reach and influence across Africa" },
                 { title: "Internationally Recognized", description: "Building a globally respected brand known for excellence" },

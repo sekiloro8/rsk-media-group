@@ -6,6 +6,9 @@ import WhatsAppButton from "@/components/WhatsAppButton";
 import ServiceCard from "@/components/ServiceCard";
 import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/hero-bg.jpg";
+import teamCollaboration from "@/assets/team-collaboration.jpg";
+import designWorkspace from "@/assets/design-workspace.jpg";
+import digitalMarketing from "@/assets/digital-marketing.jpg";
 
 const Index = () => {
   const services = [
@@ -131,8 +134,58 @@ const Index = () => {
         </div>
       </section>
 
-      {/* About Teaser */}
+      {/* Visual Showcase */}
       <section className="py-20 bg-gradient-card">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-hero bg-clip-text text-transparent">
+              Where Creativity Meets Strategy
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+              See how we bring brands to life through innovative design and strategic thinking
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-3 gap-6 mb-20">
+            <div className="animate-fade-in group">
+              <div className="overflow-hidden rounded-lg shadow-xl">
+                <img 
+                  src={teamCollaboration} 
+                  alt="Creative team collaborating on brand strategies" 
+                  className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
+                />
+              </div>
+              <h3 className="text-xl font-bold mt-4 text-foreground">Collaborative Approach</h3>
+              <p className="text-muted-foreground mt-2">Working together to bring your vision to life</p>
+            </div>
+            <div className="animate-fade-in group" style={{ animationDelay: "0.1s" }}>
+              <div className="overflow-hidden rounded-lg shadow-xl">
+                <img 
+                  src={designWorkspace} 
+                  alt="Professional design workspace and creative process" 
+                  className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
+                />
+              </div>
+              <h3 className="text-xl font-bold mt-4 text-foreground">Creative Excellence</h3>
+              <p className="text-muted-foreground mt-2">Award-winning design and brand development</p>
+            </div>
+            <div className="animate-fade-in group" style={{ animationDelay: "0.2s" }}>
+              <div className="overflow-hidden rounded-lg shadow-xl">
+                <img 
+                  src={digitalMarketing} 
+                  alt="Digital marketing analytics and performance tracking" 
+                  className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
+                />
+              </div>
+              <h3 className="text-xl font-bold mt-4 text-foreground">Data-Driven Results</h3>
+              <p className="text-muted-foreground mt-2">Strategic insights that drive growth</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* About Teaser */}
+      <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
