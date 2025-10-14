@@ -8,7 +8,7 @@ import { Card } from "@/components/ui/card";
 import portfolio1 from "@/assets/portfolio-1.jpg";
 import portfolio2 from "@/assets/portfolio-2.jpg";
 import portfolio3 from "@/assets/portfolio-3.jpg";
-import heroBg from "@/assets/hero-bg.jpg";
+import portfolioHeroBg from "@/assets/what-we-do-poster.jpeg";
 
 const Portfolio = () => {
   const projects = [
@@ -59,8 +59,8 @@ const Portfolio = () => {
       <section className="relative pt-32 pb-20 text-white overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img 
-            src={heroBg} 
-            alt="R-SK Media Portfolio background" 
+            src={portfolioHeroBg} 
+            alt="R-SK Media creative portfolio" 
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-hero/90"></div>

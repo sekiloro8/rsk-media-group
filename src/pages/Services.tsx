@@ -9,7 +9,7 @@ import designWorkspace from "@/assets/design-workspace.jpg";
 import printingFacility from "@/assets/printing-facility.jpg";
 import digitalMarketing from "@/assets/digital-marketing.jpg";
 import outdoorAdvertising from "@/assets/outdoor-advertising.jpg";
-import heroBg from "@/assets/hero-bg.jpg";
+import servicesHeroBg from "@/assets/design-workspace.jpg";
 
 const Services = () => {
   const services = [
@@ -95,8 +95,8 @@ const Services = () => {
       <section className="relative pt-32 pb-20 text-white overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img 
-            src={heroBg} 
-            alt="R-SK Media Services background" 
+            src={servicesHeroBg} 
+            alt="R-SK Media Services workspace" 
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-hero/90"></div>

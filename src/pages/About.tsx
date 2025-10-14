@@ -5,7 +5,7 @@ import WhatsAppButton from "@/components/WhatsAppButton";
 import { Card } from "@/components/ui/card";
 import teamCollaboration from "@/assets/team-collaboration.jpg";
 import brandConsultation from "@/assets/brand-consultation.jpg";
-import heroBg from "@/assets/hero-bg.jpg";
+import aboutHeroBg from "@/assets/team-collaboration.jpg";
 
 const About = () => {
   const values = [
@@ -35,8 +35,8 @@ const About = () => {
       <section className="relative pt-32 pb-20 text-white overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img 
-            src={heroBg} 
-            alt="R-SK Media Group background" 
+            src={aboutHeroBg} 
+            alt="R-SK Media Group team" 
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-hero/90"></div>
