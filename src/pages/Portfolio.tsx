@@ -8,7 +8,7 @@ import { Card } from "@/components/ui/card";
 import portfolio1 from "@/assets/portfolio-1.jpg";
 import portfolio2 from "@/assets/portfolio-2.jpg";
 import portfolio3 from "@/assets/portfolio-3.jpg";
-import portfolioHeroBg from "@/assets/what-we-do-poster.jpeg";
+import portfolioHeroBg from "@/assets/outdoor-advertising.jpg";
 
 const Portfolio = () => {
   const projects = [
