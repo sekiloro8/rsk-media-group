@@ -9,6 +9,7 @@ import designWorkspace from "@/assets/design-workspace.jpg";
 import printingFacility from "@/assets/printing-facility.jpg";
 import digitalMarketing from "@/assets/digital-marketing.jpg";
 import outdoorAdvertising from "@/assets/outdoor-advertising.jpg";
+import heroBg from "@/assets/hero-bg.jpg";
 
 const Services = () => {
   const services = [
@@ -91,8 +92,16 @@ const Services = () => {
       <WhatsAppButton />
 
       {/* Hero Section */}
-      <section className="pt-32 pb-20 bg-gradient-hero text-white">
-        <div className="container mx-auto px-4">
+      <section className="relative pt-32 pb-20 text-white overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <img 
+            src={heroBg} 
+            alt="R-SK Media Services background" 
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-hero/90"></div>
+        </div>
+        <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-5xl md:text-6xl font-black mb-6 animate-fade-in-up">
               What We Do
