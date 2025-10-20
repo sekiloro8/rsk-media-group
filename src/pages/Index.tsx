@@ -7,7 +7,7 @@ import ServiceCard from "@/components/ServiceCard";
 import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/hero-bg.jpg";
 import collaborativeWork from "@/assets/collaborative-work.jpg";
-import designWorkspace from "@/assets/design-workspace.jpg";
+import creativeExcellence from "@/assets/creative-excellence.jpg";
 import digitalMarketing from "@/assets/digital-marketing.jpg";
 
 const Index = () => {
@@ -161,7 +161,7 @@ const Index = () => {
             <div className="animate-fade-in group" style={{ animationDelay: "0.1s" }}>
               <div className="overflow-hidden rounded-lg shadow-xl">
                 <img 
-                  src={designWorkspace} 
+                  src={creativeExcellence} 
                   alt="Professional design workspace and creative process" 
                   className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
                 />
