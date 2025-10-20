@@ -5,11 +5,11 @@ import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import designWorkspace from "@/assets/design-workspace.jpg";
+import creativeDesignWork from "@/assets/creative-design-work.jpg";
 import printingFacility from "@/assets/printing-facility.jpg";
 import digitalMarketing from "@/assets/digital-marketing.jpg";
 import outdoorAdvertising from "@/assets/outdoor-advertising.jpg";
-import servicesHeroBg from "@/assets/design-workspace.jpg";
+import servicesHeroBg from "@/assets/office-consultation.jpg";
 
 const Services = () => {
   const services = [
@@ -120,7 +120,7 @@ const Services = () => {
           <div className="grid md:grid-cols-2 gap-12 items-center mb-20">
             <div className="animate-fade-in">
               <img 
-                src={designWorkspace} 
+                src={creativeDesignWork} 
                 alt="Creative design workspace for brand and product development" 
                 className="rounded-lg shadow-2xl w-full"
               />
