@@ -3,9 +3,9 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import { Card } from "@/components/ui/card";
-import agencyWorkspace from "@/assets/agency-workspace.jpg";
-import businessMeeting from "@/assets/business-meeting.jpg";
-import aboutHeroBg from "@/assets/strategy-planning.jpg";
+import teamCollaboration from "@/assets/team-collaboration.jpg";
+import brandConsultation from "@/assets/brand-consultation.jpg";
+import aboutHeroBg from "@/assets/team-collaboration.jpg";
 
 const About = () => {
   const values = [
@@ -73,7 +73,7 @@ const About = () => {
             </div>
             <div className="order-1 md:order-2 animate-fade-in">
               <img 
-                src={agencyWorkspace} 
+                src={teamCollaboration} 
                 alt="R-SK Media Group team collaborating on creative projects" 
                 className="rounded-lg shadow-2xl w-full"
               />
@@ -119,7 +119,7 @@ const About = () => {
             <div className="grid md:grid-cols-2 gap-12 items-center mb-12">
               <div className="animate-fade-in">
                 <img 
-                  src={businessMeeting} 
+                  src={brandConsultation} 
                   alt="Professional brand consultation and strategy meeting" 
                   className="rounded-lg shadow-2xl w-full"
                 />

@@ -9,7 +9,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Card } from "@/components/ui/card";
 import { useToast } from "@/hooks/use-toast";
 import { z } from "zod";
-import contactHeroBg from "@/assets/client-consultation.jpg";
+import contactHeroBg from "@/assets/brand-consultation.jpg";
 
 const contactSchema = z.object({
   name: z.string().trim().min(2, "Name must be at least 2 characters").max(100, "Name must be less than 100 characters"),
