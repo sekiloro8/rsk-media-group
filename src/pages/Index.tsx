@@ -6,7 +6,7 @@ import WhatsAppButton from "@/components/WhatsAppButton";
 import ServiceCard from "@/components/ServiceCard";
 import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/hero-bg.jpg";
-import teamCollaboration from "@/assets/team-collaboration.jpg";
+import collaborativeWork from "@/assets/collaborative-work.jpg";
 import designWorkspace from "@/assets/design-workspace.jpg";
 import digitalMarketing from "@/assets/digital-marketing.jpg";
 
@@ -150,7 +150,7 @@ const Index = () => {
             <div className="animate-fade-in group">
               <div className="overflow-hidden rounded-lg shadow-xl">
                 <img 
-                  src={teamCollaboration} 
+                  src={collaborativeWork} 
                   alt="Creative team collaborating on brand strategies" 
                   className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
                 />
