@@ -12,6 +12,9 @@ export default {
         "2xl": "1400px",
       },
     },
+    fontFamily: {
+      sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+    },
     extend: {
       colors: {
         border: "hsl(var(--border))",
@@ -112,9 +115,17 @@ export default {
         "gradient-card": "var(--gradient-card)",
         "gradient-accent": "var(--gradient-accent)",
         "gradient-secondary": "var(--gradient-secondary)",
+        "gradient-gold-shimmer": "var(--gradient-gold-shimmer)",
       },
       boxShadow: {
         "glow": "var(--shadow-glow)",
+        "glow-strong": "var(--shadow-glow-strong)",
+        "xl": "var(--shadow-xl)",
+      },
+      spacing: {
+        "18": "4.5rem",
+        "112": "28rem",
+        "128": "32rem",
       },
     },
   },
