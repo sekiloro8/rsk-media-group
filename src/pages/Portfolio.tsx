@@ -46,7 +46,7 @@ const Portfolio = () => {
     {
       quote: "The team's understanding of the African market and their innovative solutions made all the difference in our campaign success.",
       author: "Masechaba Matsemela",
-      position: "Mophuthing Media",
+      position: "Founder, CEO - Mophuthing Media",
     },
   ];
 
