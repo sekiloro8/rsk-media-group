@@ -40,8 +40,8 @@ const Portfolio = () => {
     },
     {
       quote: "Professional, creative, and results-driven. Working with R-SK has been a game-changer for our digital presence.",
-      author: "CEO",
-      position: "Bokamoso Dairy Goats Farm",
+      author: "Maretsepile Malipoli Kopo",
+      position: "CEO, Bokamoso Dairy Goats Farm",
     },
     {
       quote: "The team's understanding of the African market and their innovative solutions made all the difference in our campaign success.",
