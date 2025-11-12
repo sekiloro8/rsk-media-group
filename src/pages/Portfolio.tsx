@@ -35,8 +35,8 @@ const Portfolio = () => {
   const testimonials = [
     {
       quote: "R-SK Media Group transformed our brand visibility. Their strategic approach and creative excellence delivered results beyond our expectations.",
-      author: "Sarah M.",
-      position: "Marketing Director, Retail Brand",
+      author: "Nthethe Ralitapole",
+      position: "Founder, CEO - Mohomane Farm",
     },
     {
       quote: "Professional, creative, and results-driven. Working with R-SK has been a game-changer for our digital presence.",
