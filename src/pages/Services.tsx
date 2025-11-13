@@ -10,6 +10,8 @@ import printingFacility from "@/assets/printing-facility.jpg";
 import digitalMarketing from "@/assets/digital-marketing.jpg";
 import outdoorAdvertising from "@/assets/outdoor-advertising.jpg";
 import servicesHeroBg from "@/assets/design-workspace.jpg";
+import brandConsultation from "@/assets/brand-consultation.jpg";
+import creativeDesignWork from "@/assets/creative-design-work.jpg";
 
 const Services = () => {
   const services = [
@@ -116,41 +118,96 @@ const Services = () => {
       {/* Services Showcase with Images */}
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4 max-w-7xl">
-          {/* Brand & Product Development */}
+          {/* Brand Development */}
           <div className="grid md:grid-cols-2 gap-12 items-center mb-20">
             <div className="animate-fade-in">
               <img 
-                src={designWorkspace} 
-                alt="Creative design workspace for brand and product development" 
+                src={creativeDesignWork} 
+                alt="Creative design work for brand development" 
                 className="rounded-lg shadow-2xl w-full"
               />
             </div>
             <div>
-              <div className="grid gap-6">
-                {services.slice(0, 3).map((service, index) => (
-                  <Card
-                    key={index}
-                    className="p-6 hover:shadow-xl transition-all duration-300 border-border/50 hover:border-primary/30 bg-gradient-card"
-                  >
-                    <div className="flex items-start gap-4">
-                      <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-gradient-accent text-accent-foreground flex items-center justify-center">
-                        <service.icon size={24} />
-                      </div>
-                      <div className="flex-1">
-                        <h2 className="text-xl font-bold mb-2 text-foreground">{service.title}</h2>
-                        <p className="text-muted-foreground text-sm mb-3">{service.description}</p>
-                        <div className="flex flex-wrap gap-2">
-                          {service.features.map((feature, idx) => (
-                            <span key={idx} className="text-xs px-2 py-1 rounded bg-primary/10 text-primary">
-                              {feature}
-                            </span>
-                          ))}
-                        </div>
-                      </div>
+              <Card className="p-6 hover:shadow-xl transition-all duration-300 border-border/50 hover:border-primary/30 bg-gradient-card">
+                <div className="flex items-start gap-4">
+                  <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-gradient-accent text-accent-foreground flex items-center justify-center">
+                    <Award size={24} />
+                  </div>
+                  <div className="flex-1">
+                    <h2 className="text-xl font-bold mb-2 text-foreground">{services[0].title}</h2>
+                    <p className="text-muted-foreground text-sm mb-3">{services[0].description}</p>
+                    <div className="flex flex-wrap gap-2">
+                      {services[0].features.map((feature, idx) => (
+                        <span key={idx} className="text-xs px-2 py-1 rounded bg-primary/10 text-primary">
+                          {feature}
+                        </span>
+                      ))}
                     </div>
-                  </Card>
-                ))}
-              </div>
+                  </div>
+                </div>
+              </Card>
+            </div>
+          </div>
+
+          {/* Brand Consultation */}
+          <div className="grid md:grid-cols-2 gap-12 items-center mb-20">
+            <div className="order-2 md:order-1">
+              <Card className="p-6 hover:shadow-xl transition-all duration-300 border-border/50 hover:border-primary/30 bg-gradient-card">
+                <div className="flex items-start gap-4">
+                  <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-gradient-accent text-accent-foreground flex items-center justify-center">
+                    <MessageSquare size={24} />
+                  </div>
+                  <div className="flex-1">
+                    <h2 className="text-xl font-bold mb-2 text-foreground">{services[2].title}</h2>
+                    <p className="text-muted-foreground text-sm mb-3">{services[2].description}</p>
+                    <div className="flex flex-wrap gap-2">
+                      {services[2].features.map((feature, idx) => (
+                        <span key={idx} className="text-xs px-2 py-1 rounded bg-primary/10 text-primary">
+                          {feature}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </Card>
+            </div>
+            <div className="order-1 md:order-2 animate-fade-in">
+              <img 
+                src={brandConsultation} 
+                alt="Professional brand consultation services" 
+                className="rounded-lg shadow-2xl w-full"
+              />
+            </div>
+          </div>
+
+          {/* Product Development */}
+          <div className="grid md:grid-cols-2 gap-12 items-center mb-20">
+            <div className="animate-fade-in">
+              <img 
+                src={designWorkspace} 
+                alt="Creative design workspace for product development" 
+                className="rounded-lg shadow-2xl w-full"
+              />
+            </div>
+            <div>
+              <Card className="p-6 hover:shadow-xl transition-all duration-300 border-border/50 hover:border-primary/30 bg-gradient-card">
+                <div className="flex items-start gap-4">
+                  <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-gradient-accent text-accent-foreground flex items-center justify-center">
+                    <Package size={24} />
+                  </div>
+                  <div className="flex-1">
+                    <h2 className="text-xl font-bold mb-2 text-foreground">{services[1].title}</h2>
+                    <p className="text-muted-foreground text-sm mb-3">{services[1].description}</p>
+                    <div className="flex flex-wrap gap-2">
+                      {services[1].features.map((feature, idx) => (
+                        <span key={idx} className="text-xs px-2 py-1 rounded bg-primary/10 text-primary">
+                          {feature}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </Card>
             </div>
           </div>
 
