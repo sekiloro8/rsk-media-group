@@ -89,13 +89,13 @@ const Footer = () => {
               © {currentYear} R-SK Media Group. All rights reserved.
             </p>
             <div className="flex gap-4">
-              <a href="#" className="hover:text-accent transition-colors">
+              <a href="https://www.facebook.com/RSKMediaGroup" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">
                 <Facebook size={20} />
               </a>
-              <a href="#" className="hover:text-accent transition-colors">
+              <a href="https://www.instagram.com/rskmediagroup/" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">
                 <Instagram size={20} />
               </a>
-              <a href="#" className="hover:text-accent transition-colors">
+              <a href="https://x.com/rskmediagroup" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">
                 <Twitter size={20} />
               </a>
               <a href="#" className="hover:text-accent transition-colors">
