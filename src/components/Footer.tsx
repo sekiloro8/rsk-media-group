@@ -11,7 +11,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           {/* Company Info */}
           <div>
-            <img src={logoWhite} alt="R-SK Media Group" className="h-16 w-auto mb-4" />
+            <img src={logoWhite} alt="R-SK Media Group" className="h-20 w-auto mb-4" />
             <p className="text-primary-foreground/80 text-sm">
               Innovative Media Solutions for Africa. Your Partner You Can Trust in Media, Marketing & Digital Growth.
             </p>
