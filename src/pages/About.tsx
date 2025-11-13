@@ -3,7 +3,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import { Card } from "@/components/ui/card";
-import teamCollaboration from "@/assets/team-collaboration.jpg";
+import teamMeeting from "@/assets/team-meeting.jpg";
 import brandConsultation from "@/assets/brand-consultation.jpg";
 import aboutHeroBg from "@/assets/team-collaboration.jpg";
 
@@ -73,7 +73,7 @@ const About = () => {
             </div>
             <div className="order-1 md:order-2 animate-fade-in">
               <img 
-                src={teamCollaboration} 
+                src={teamMeeting} 
                 alt="R-SK Media Group team collaborating on creative projects" 
                 className="rounded-lg shadow-2xl w-full"
               />
