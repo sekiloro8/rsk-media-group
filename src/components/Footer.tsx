@@ -98,7 +98,7 @@ const Footer = () => {
               <a href="https://x.com/rskmediagroup" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">
                 <Twitter size={20} />
               </a>
-              <a href="#" className="hover:text-accent transition-colors">
+              <a href="https://www.linkedin.com/in/r-sk-mediagroup-409846298/" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">
                 <Linkedin size={20} />
               </a>
             </div>

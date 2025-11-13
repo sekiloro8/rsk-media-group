@@ -92,7 +92,7 @@ const Contact = () => {
     { icon: Facebook, url: "https://www.facebook.com/RSKMediaGroup", name: "Facebook" },
     { icon: Instagram, url: "https://www.instagram.com/rskmediagroup/", name: "Instagram" },
     { icon: Twitter, url: "https://x.com/rskmediagroup", name: "Twitter" },
-    { icon: Linkedin, url: "#", name: "LinkedIn" },
+    { icon: Linkedin, url: "https://www.linkedin.com/in/r-sk-mediagroup-409846298/", name: "LinkedIn" },
   ];
 
   return (
