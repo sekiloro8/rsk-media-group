@@ -211,59 +211,65 @@ const Services = () => {
             </div>
           </div>
 
-          {/* Printing & Digital Services */}
+          {/* Printing & Publishing */}
           <div className="grid md:grid-cols-2 gap-12 items-center mb-20">
             <div className="order-2 md:order-1">
-              <div className="grid gap-6">
-                <Card className="p-6 hover:shadow-xl transition-all duration-300 border-border/50 hover:border-primary/30 bg-gradient-card">
-                  <div className="flex items-start gap-4">
-                    <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-gradient-accent text-accent-foreground flex items-center justify-center">
-                      <Printer size={24} />
-                    </div>
-                    <div className="flex-1">
-                      <h2 className="text-xl font-bold mb-2 text-foreground">{services[3].title}</h2>
-                      <p className="text-muted-foreground text-sm mb-3">{services[3].description}</p>
-                      <div className="flex flex-wrap gap-2">
-                        {services[3].features.map((feature, idx) => (
-                          <span key={idx} className="text-xs px-2 py-1 rounded bg-primary/10 text-primary">
-                            {feature}
-                          </span>
-                        ))}
-                      </div>
+              <Card className="p-6 hover:shadow-xl transition-all duration-300 border-border/50 hover:border-primary/30 bg-gradient-card">
+                <div className="flex items-start gap-4">
+                  <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-gradient-accent text-accent-foreground flex items-center justify-center">
+                    <Printer size={24} />
+                  </div>
+                  <div className="flex-1">
+                    <h2 className="text-xl font-bold mb-2 text-foreground">{services[3].title}</h2>
+                    <p className="text-muted-foreground text-sm mb-3">{services[3].description}</p>
+                    <div className="flex flex-wrap gap-2">
+                      {services[3].features.map((feature, idx) => (
+                        <span key={idx} className="text-xs px-2 py-1 rounded bg-primary/10 text-primary">
+                          {feature}
+                        </span>
+                      ))}
                     </div>
                   </div>
-                </Card>
-                <Card className="p-6 hover:shadow-xl transition-all duration-300 border-border/50 hover:border-primary/30 bg-gradient-card">
-                  <div className="flex items-start gap-4">
-                    <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-gradient-accent text-accent-foreground flex items-center justify-center">
-                      <TrendingUp size={24} />
-                    </div>
-                    <div className="flex-1">
-                      <h2 className="text-xl font-bold mb-2 text-foreground">{services[4].title}</h2>
-                      <p className="text-muted-foreground text-sm mb-3">{services[4].description}</p>
-                      <div className="flex flex-wrap gap-2">
-                        {services[4].features.map((feature, idx) => (
-                          <span key={idx} className="text-xs px-2 py-1 rounded bg-primary/10 text-primary">
-                            {feature}
-                          </span>
-                        ))}
-                      </div>
-                    </div>
-                  </div>
-                </Card>
-              </div>
+                </div>
+              </Card>
             </div>
-            <div className="order-1 md:order-2 grid grid-cols-2 gap-4 animate-fade-in">
+            <div className="order-1 md:order-2 animate-fade-in">
               <img 
                 src={printingFacility} 
                 alt="Professional printing facility and equipment" 
-                className="rounded-lg shadow-xl w-full"
+                className="rounded-lg shadow-2xl w-full"
               />
+            </div>
+          </div>
+
+          {/* Digital Marketing */}
+          <div className="grid md:grid-cols-2 gap-12 items-center mb-20">
+            <div className="animate-fade-in">
               <img 
                 src={digitalMarketing} 
                 alt="Digital marketing analytics and strategy" 
-                className="rounded-lg shadow-xl w-full mt-8"
+                className="rounded-lg shadow-2xl w-full"
               />
+            </div>
+            <div>
+              <Card className="p-6 hover:shadow-xl transition-all duration-300 border-border/50 hover:border-primary/30 bg-gradient-card">
+                <div className="flex items-start gap-4">
+                  <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-gradient-accent text-accent-foreground flex items-center justify-center">
+                    <TrendingUp size={24} />
+                  </div>
+                  <div className="flex-1">
+                    <h2 className="text-xl font-bold mb-2 text-foreground">{services[4].title}</h2>
+                    <p className="text-muted-foreground text-sm mb-3">{services[4].description}</p>
+                    <div className="flex flex-wrap gap-2">
+                      {services[4].features.map((feature, idx) => (
+                        <span key={idx} className="text-xs px-2 py-1 rounded bg-primary/10 text-primary">
+                          {feature}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </Card>
             </div>
           </div>
 
