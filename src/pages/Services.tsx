@@ -10,7 +10,7 @@ import printingFacility from "@/assets/printing-facility.jpg";
 import digitalMarketing from "@/assets/digital-marketing.jpg";
 import outdoorAdvertising from "@/assets/outdoor-advertising.jpg";
 import servicesHeroBg from "@/assets/design-workspace.jpg";
-import brandConsultation from "@/assets/brand-consultation.jpg";
+import brandConsultation from "@/assets/strategy-planning.jpg";
 import creativeDesignWork from "@/assets/creative-design-work.jpg";
 
 const Services = () => {
@@ -174,7 +174,7 @@ const Services = () => {
             <div className="order-1 md:order-2 animate-fade-in">
               <img 
                 src={brandConsultation} 
-                alt="Professional brand consultation services" 
+                alt="Strategic brand planning and consultation" 
                 className="rounded-lg shadow-2xl w-full"
               />
             </div>
