@@ -1,7 +1,6 @@
 import { serve } from "https://deno.land/std@0.190.0/http/server.ts";
-import { Resend } from "npm:resend@2.0.0";
 
-const resend = new Resend(Deno.env.get("RESEND_API_KEY"));
+const RESEND_API_KEY = Deno.env.get("RESEND_API_KEY");
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
@@ -27,27 +26,41 @@ const handler = async (req: Request): Promise<Response> => {
     const { name, email, phone, message }: ContactEmailRequest = await req.json();
     console.log("Processing contact email from:", email);
 
-    // Send email to R-SK Media
-    const emailResponse = await resend.emails.send({
-      from: "R-SK Media Contact <onboarding@resend.dev>",
-      to: ["rskmediagroup@gmail.com"],
-      replyTo: email,
-      subject: `New Contact Form Submission from ${name}`,
-      html: `
-        <h2>New Contact Form Submission</h2>
-        <p><strong>Name:</strong> ${name}</p>
-        <p><strong>Email:</strong> ${email}</p>
-        <p><strong>Phone:</strong> ${phone}</p>
-        <p><strong>Message:</strong></p>
-        <p>${message}</p>
-        <hr>
-        <p><em>This email was sent from the R-SK Media contact form.</em></p>
-      `,
+    // Send email to R-SK Media using Resend API
+    const emailResponse = await fetch("https://api.resend.com/emails", {
+      method: "POST",
+      headers: {
+        "Authorization": `Bearer ${RESEND_API_KEY}`,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        from: "R-SK Media Contact <onboarding@resend.dev>",
+        to: ["rskmediagroup@gmail.com"],
+        reply_to: email,
+        subject: `New Contact Form Submission from ${name}`,
+        html: `
+          <h2>New Contact Form Submission</h2>
+          <p><strong>Name:</strong> ${name}</p>
+          <p><strong>Email:</strong> ${email}</p>
+          <p><strong>Phone:</strong> ${phone}</p>
+          <p><strong>Message:</strong></p>
+          <p>${message}</p>
+          <hr>
+          <p><em>This email was sent from the R-SK Media contact form.</em></p>
+        `,
+      }),
     });
 
-    console.log("Email sent successfully:", emailResponse);
+    if (!emailResponse.ok) {
+      const errorData = await emailResponse.json();
+      throw new Error(`Resend API error: ${JSON.stringify(errorData)}`);
+    }
 
-    return new Response(JSON.stringify({ success: true, data: emailResponse }), {
+    const emailData = await emailResponse.json();
+
+    console.log("Email sent successfully:", emailData);
+
+    return new Response(JSON.stringify({ success: true, data: emailData }), {
       status: 200,
       headers: {
         "Content-Type": "application/json",
