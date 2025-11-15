@@ -27,7 +27,7 @@ const handler = async (req: Request): Promise<Response> => {
     console.log("Processing contact email from:", email);
 
     // Send email to R-SK Media using Resend API
-    const emailResponse = await fetch("https://api.resend.com/emails", {
+    const businessEmailResponse = await fetch("https://api.resend.com/emails", {
       method: "POST",
       headers: {
         "Authorization": `Bearer ${RESEND_API_KEY}`,
@@ -51,16 +51,47 @@ const handler = async (req: Request): Promise<Response> => {
       }),
     });
 
-    if (!emailResponse.ok) {
-      const errorData = await emailResponse.json();
+    if (!businessEmailResponse.ok) {
+      const errorData = await businessEmailResponse.json();
       throw new Error(`Resend API error: ${JSON.stringify(errorData)}`);
     }
 
-    const emailData = await emailResponse.json();
+    const businessEmailData = await businessEmailResponse.json();
+    console.log("Business email sent successfully:", businessEmailData);
 
-    console.log("Email sent successfully:", emailData);
+    // Send auto-reply confirmation to customer
+    const customerEmailResponse = await fetch("https://api.resend.com/emails", {
+      method: "POST",
+      headers: {
+        "Authorization": `Bearer ${RESEND_API_KEY}`,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        from: "R-SK Media <onboarding@resend.dev>",
+        to: [email],
+        subject: "Thank you for contacting R-SK Media",
+        html: `
+          <h2>Thank you for your message, ${name}!</h2>
+          <p>We have received your inquiry and will get back to you as soon as possible.</p>
+          <h3>Your message:</h3>
+          <p>${message}</p>
+          <hr>
+          <p>Best regards,<br><strong>R-SK Media Team</strong></p>
+          <p><em>This is an automated confirmation email.</em></p>
+        `,
+      }),
+    });
 
-    return new Response(JSON.stringify({ success: true, data: emailData }), {
+    if (!customerEmailResponse.ok) {
+      const errorData = await customerEmailResponse.json();
+      console.error("Customer email failed:", errorData);
+      // Don't throw error here - business email already sent
+    } else {
+      const customerEmailData = await customerEmailResponse.json();
+      console.log("Customer confirmation email sent successfully:", customerEmailData);
+    }
+
+    return new Response(JSON.stringify({ success: true, data: businessEmailData }), {
       status: 200,
       headers: {
         "Content-Type": "application/json",
