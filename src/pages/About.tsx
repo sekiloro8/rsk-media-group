@@ -2,9 +2,9 @@ import { Target, Eye, Award } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import AnimatedCityBackground from "@/components/AnimatedCityBackground";
 import { Card } from "@/components/ui/card";
 import teamMeeting from "@/assets/team-meeting.jpg";
-import brandConsultation from "@/assets/brand-consultation.jpg";
 import aboutHeroBg from "@/assets/team-collaboration.jpg";
 
 const About = () => {
@@ -117,12 +117,8 @@ const About = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="grid md:grid-cols-2 gap-12 items-center mb-12">
-              <div className="animate-fade-in">
-                <img 
-                  src={brandConsultation} 
-                  alt="Professional brand consultation and strategy meeting" 
-                  className="rounded-lg shadow-2xl w-full"
-                />
+              <div className="relative h-96 rounded-lg shadow-2xl overflow-hidden animate-fade-in">
+                <AnimatedCityBackground />
               </div>
               <div>
                 <h2 className="text-4xl font-bold mb-6 text-foreground">
