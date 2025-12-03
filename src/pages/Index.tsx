@@ -3,7 +3,6 @@ import { ArrowRight, Package, Award, MessageSquare, Printer, TrendingUp, Radio }
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
-import AnimatedCityBackgroundHome from "@/components/AnimatedCityBackgroundHome";
 import ServiceCard from "@/components/ServiceCard";
 import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/hero-bg.jpg";
@@ -52,7 +51,6 @@ const Index = () => {
 
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-hero">
-        <AnimatedCityBackgroundHome />
         <div
           className="absolute inset-0 z-0 opacity-20"
           style={{
