@@ -9,7 +9,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Card } from "@/components/ui/card";
 import { useToast } from "@/hooks/use-toast";
 import { z } from "zod";
-import contactHeroBg from "@/assets/brand-consultation.jpg";
+import contactHeroBg from "@/assets/contact-hero.jpg";
 import { supabase } from "@/integrations/supabase/client";
 
 const contactSchema = z.object({
