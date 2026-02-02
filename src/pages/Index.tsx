@@ -57,9 +57,16 @@ const Index = () => {
           muted
           loop
           playsInline
+          preload="auto"
+          poster={heroImage}
           className="absolute inset-0 w-full h-full object-cover z-0"
+          onLoadedData={(e) => {
+            const video = e.currentTarget;
+            video.play().catch(() => {});
+          }}
         >
           <source src={heroVideo} type="video/webm" />
+          Your browser does not support the video tag.
         </video>
         <div className="absolute inset-0 bg-black/50 z-0" />
 
