@@ -65,7 +65,7 @@ const Index = () => {
             video.play().catch(() => {});
           }}
         >
-          <source src={heroVideo} type="video/webm" />
+          <source src={heroVideo} type="video/mp4" />
           Your browser does not support the video tag.
         </video>
         <div className="absolute inset-0 bg-black/50 z-0" />
