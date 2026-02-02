@@ -26,6 +26,7 @@ const Contact = () => {
     email: "",
     phone: "",
     message: "",
+    honeypot: "", // Hidden field for bot detection
   });
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -66,6 +67,7 @@ const Contact = () => {
           email: formData.email,
           phone: formData.phone,
           message: formData.message,
+          honeypot: formData.honeypot, // Include honeypot for bot detection
         },
       });
 
@@ -83,6 +85,7 @@ const Contact = () => {
         email: "",
         phone: "",
         message: "",
+        honeypot: "",
       });
       setErrors({});
     } catch (error) {
@@ -218,6 +221,20 @@ const Contact = () => {
                     className={errors.message ? "border-destructive" : ""}
                   />
                   {errors.message && <p className="text-destructive text-sm mt-1">{errors.message}</p>}
+                </div>
+
+                {/* Honeypot field - hidden from real users, bots will fill it */}
+                <div className="absolute -left-[9999px]" aria-hidden="true">
+                  <label htmlFor="website">Website</label>
+                  <input
+                    type="text"
+                    id="website"
+                    name="honeypot"
+                    value={formData.honeypot}
+                    onChange={handleChange}
+                    tabIndex={-1}
+                    autoComplete="off"
+                  />
                 </div>
 
                 <Button 
