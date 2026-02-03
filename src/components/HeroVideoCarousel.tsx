@@ -1,9 +1,11 @@
 import { useState, useEffect, useRef } from "react";
-import timesSquareVideo from "@/assets/times-square-billboards.mp4";
+import heroVideo from "@/assets/hero-video.webm";
+import africanCityscape from "@/assets/african-cityscape.mp4";
 import heroImage from "@/assets/hero-bg.jpg";
 
 const videos = [
-  { src: timesSquareVideo, type: "video/mp4" },
+  { src: heroVideo, type: "video/webm" },
+  { src: africanCityscape, type: "video/mp4" },
 ];
 
 const HeroVideoCarousel = () => {
