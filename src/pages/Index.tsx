@@ -6,7 +6,7 @@ import WhatsAppButton from "@/components/WhatsAppButton";
 import ServiceCard from "@/components/ServiceCard";
 import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/hero-bg.jpg";
-import HeroVideoCarousel from "@/components/HeroVideoCarousel";
+import HeroBackground from "@/components/HeroBackground";
 import collaborativeWork from "@/assets/collaborative-work.jpg";
 import creativeExcellence from "@/assets/creative-excellence.jpg";
 import digitalMarketing from "@/assets/digital-marketing.jpg";
@@ -52,7 +52,7 @@ const Index = () => {
 
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-hero">
-        <HeroVideoCarousel />
+        <HeroBackground />
         <div className="absolute inset-0 bg-black/50 z-0" />
 
         <div className="container mx-auto px-4 relative z-10">
