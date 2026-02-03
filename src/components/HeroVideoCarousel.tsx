@@ -56,27 +56,29 @@ const HeroVideoCarousel = () => {
         </video>
       ))}
       
-      {/* Video indicators */}
-      <div className="absolute bottom-24 left-1/2 -translate-x-1/2 z-10 flex gap-2">
-        {videos.map((_, index) => (
-          <button
-            key={index}
-            onClick={() => {
-              setIsTransitioning(true);
-              setTimeout(() => {
-                setCurrentIndex(index);
-                setIsTransitioning(false);
-              }, 300);
-            }}
-            className={`w-2 h-2 rounded-full transition-all duration-300 ${
-              index === currentIndex
-                ? "bg-white w-6"
-                : "bg-white/50 hover:bg-white/75"
-            }`}
-            aria-label={`Go to video ${index + 1}`}
-          />
-        ))}
-      </div>
+      {/* Video indicators - only show if more than one video */}
+      {videos.length > 1 && (
+        <div className="absolute bottom-24 left-1/2 -translate-x-1/2 z-10 flex gap-2">
+          {videos.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => {
+                setIsTransitioning(true);
+                setTimeout(() => {
+                  setCurrentIndex(index);
+                  setIsTransitioning(false);
+                }, 300);
+              }}
+              className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                index === currentIndex
+                  ? "bg-white w-6"
+                  : "bg-white/50 hover:bg-white/75"
+              }`}
+              aria-label={`Go to video ${index + 1}`}
+            />
+          ))}
+        </div>
+      )}
     </>
   );
 };
