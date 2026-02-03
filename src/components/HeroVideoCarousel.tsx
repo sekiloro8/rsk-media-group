@@ -1,11 +1,9 @@
 import { useState, useEffect, useRef } from "react";
 import heroVideo from "@/assets/hero-video.webm";
-import timesSquareVideo from "@/assets/times-square-billboards.mp4";
 import heroImage from "@/assets/hero-bg.jpg";
 
 const videos = [
   { src: heroVideo, type: "video/webm" },
-  { src: timesSquareVideo, type: "video/mp4" },
 ];
 
 const HeroVideoCarousel = () => {
